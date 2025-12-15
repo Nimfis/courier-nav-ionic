@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Trasy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="!loading">
+    <ion-item button *ngFor="let r of routes" (click)="openRoute(r.id)">
+      <ion-label>
+        <h2>{{ r.name }}</h2>
+        <p>{{ r.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="loading" style="padding: 16px;">
+    <ion-spinner></ion-spinner>
+  </div>
+
+  <ion-card *ngIf="!loading && routes.length === 0">
+    <ion-card-header>
+      <ion-card-title>Brak tras</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Dodaj trasy w <code>db.json</code>.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,213 @@
+{
+  "routes": [
+    { "id": 1, "name": "Trasa A – Centrum", "description": "Krótka trasa po centrum (3 punkty)" },
+    { "id": 2, "name": "Trasa B – Północ", "description": "Dojazd na północ miasta (3 punkty)" },
+    { "id": 3, "name": "Trasa C – Południe", "description": "Dojazd na południe miasta (3 punkty)" }
+  ],
+  "waypoints": [
+    {
+      "id": 101,
+      "routeId": 1,
+      "order": 1,
+      "title": "A1 – Portiernia",
+      "description": "Zgłoś się do portierni przy wejściu głównym.",
+      "lat": 49.89163557657951, 
+      "lng": 19.11438145922981,
+      "radiusMeters": 5000
+    },
+    {
+      "id": 102,
+      "routeId": 1,
+      "order": 2,
+      "title": "A2 – Recepcja",
+      "description": "Wejdź na 1 piętro. W recepcji podaj numer zlecenia.",
+      "lat": 52.23135,
+      "lng": 21.00689,
+      "radiusMeters": 70
+    },
+    {
+      "id": 103,
+      "routeId": 1,
+      "order": 3,
+      "title": "A3 – Tylne wejście",
+      "description": "Wjazd od parkingu. Jeśli zamknięte, użyj domofonu 'Dostawy'.",
+      "lat": 52.22674,
+      "lng": 21.00349,
+      "radiusMeters": 90
+    },
+
+    {
+      "id": 201,
+      "routeId": 2,
+      "order": 1,
+      "title": "B1 – Magazyn",
+      "description": "Wjazd tylko bramą nr 2.",
+      "lat": 52.27303,
+      "lng": 20.98016,
+      "radiusMeters": 120
+    },
+    {
+      "id": 202,
+      "routeId": 2,
+      "order": 2,
+      "title": "B2 – Hala A",
+      "description": "Odbiór po kodzie. Podejdź do stanowiska 'Wydanie'.",
+      "lat": 52.26437,
+      "lng": 20.97532,
+      "radiusMeters": 120
+    },
+    {
+      "id": 203,
+      "routeId": 2,
+      "order": 3,
+      "title": "B3 – Sekretariat",
+      "description": "Zostaw paczkę w szafce oznaczonej 'KURIER'.",
+      "lat": 52.25812,
+      "lng": 20.99095,
+      "radiusMeters": 100
+    },
+
+    {
+      "id": 301,
+      "routeId": 3,
+      "order": 1,
+      "title": "C1 – Wejście od ulicy",
+      "description": "Użyj dzwonka 'Dostawy'.",
+      "lat": 52.20801,
+      "lng": 21.03631,
+      "radiusMeters": 90
+    },
+    {
+      "id": 302,
+      "routeId": 3,
+      "order": 2,
+      "title": "C2 – Dokumenty",
+      "description": "Odbierz komplet dokumentów i sprawdź podpis oraz datę.",
+      "lat": 52.20284,
+      "lng": 21.02388,
+      "radiusMeters": 90
+    },
+    {
+      "id": 303,
+      "routeId": 3,
+      "order": 3,
+      "title": "C3 – Parking podziemny",
+      "description": "Zjedź na parking podziemny. Punkt odbioru przy windzie B.",
+      "lat": 52.19762,
+      "lng": 21.01752,
+      "radiusMeters": 120
+    }
+  ],
+  "materials": [
+    {
+      "id": 1001,
+      "waypointId": 101,
+      "type": "text",
+      "title": "Instrukcja",
+      "content": "Wejdź głównym wejściem i zgłoś się do portiera. Powiedz: 'Dostawa – Trasa A'."
+    },
+    {
+      "id": 1002,
+      "waypointId": 101,
+      "type": "code",
+      "title": "Kod odbioru",
+      "content": "A1-1234"
+    },
+    {
+      "id": 1003,
+      "waypointId": 101,
+      "type": "audio",
+      "title": "audio",
+      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    },
+    {
+      "id": 1004,
+      "waypointId": 101,
+      "type": "video",
+      "title": "Wideo",
+      "url": "https://www.youtube.com/watch?v=5CEcOXyn9zs"
+    },
+
+    {
+      "id": 1101,
+      "waypointId": 102,
+      "type": "text",
+      "title": "Instrukcja",
+      "content": "W recepcji podaj numer zlecenia i poproś o potwierdzenie."
+    },
+    {
+      "id": 1102,
+      "waypointId": 102,
+      "type": "code",
+      "title": "Kod",
+      "content": "A2-7788"
+    },
+    {
+      "id": 1103,
+      "waypointId": 102,
+      "type": "video",
+      "title": "Wideo (MP4 link)",
+      "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    },
+
+    {
+      "id": 1201,
+      "waypointId": 103,
+      "type": "text",
+      "title": "Instrukcja",
+      "content": "Jeśli zamknięte, użyj domofonu 'Dostawy'."
+    },
+    {
+      "id": 1202,
+      "waypointId": 103,
+      "type": "code",
+      "title": "Kod",
+      "content": "A3-0099"
+    },
+
+    {
+      "id": 2001,
+      "waypointId": 201,
+      "type": "text",
+      "title": "Procedura wjazdu",
+      "content": "Podjedź pod bramę nr 2. Ochrona może poprosić o numer rejestracyjny."
+    },
+    {
+      "id": 2002,
+      "waypointId": 201,
+      "type": "code",
+      "title": "Kod wjazdu",
+      "content": "B1-4455"
+    },
+
+    {
+      "id": 2101,
+      "waypointId": 202,
+      "type": "text",
+      "title": "Odbiór",
+      "content": "Podejdź do stanowiska 'Wydanie'. Odbierz paczkę po okazaniu kodu."
+    },
+    {
+      "id": 2102,
+      "waypointId": 202,
+      "type": "code",
+      "title": "Kod odbioru",
+      "content": "B2-1010"
+    },
+
+    {
+      "id": 2201,
+      "waypointId": 203,
+      "type": "text",
+      "title": "Zostawienie przesyłki",
+      "content": "Zostaw paczkę w szafce 'KURIER'."
+    },
+    {
+      "id": 2202,
+      "waypointId": 203,
+      "type": "code",
+      "title": "Kod szafki",
+      "content": "B3-7777"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/routes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Waypointy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="!loading">
+    <ion-item button *ngFor="let w of waypoints" (click)="openWaypoint(w.id)">
+      <ion-label>
+        <h2>{{ w.order }}. {{ w.title }}</h2>
+        <p>{{ w.description }}</p>
+      </ion-label>
+
+      <ion-icon
+        *ngIf="isVisited(w.id)"
+        slot="end"
+        name="checkmark-circle"
+        color="success"
+      ></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="loading" style="padding: 16px;">
+    <ion-spinner></ion-spinner>
+  </div>
+</ion-content>
